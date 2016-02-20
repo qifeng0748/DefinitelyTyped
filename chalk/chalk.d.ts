@@ -9,12 +9,12 @@ declare module Chalk {
 		supportsColor: boolean;
 		styles: ChalkStyleMap;
 
-		stripColor(value: string): any;
+		stripColor(value: string): string;
 		hasColor(str:  string): boolean;
 	}
 
 	export interface ChalkChain extends ChalkStyle {
-		(...text: string[]): ChalkChain;
+		(...text: string[]): string;
 	}
 
 	export interface ChalkStyleElement {
@@ -26,6 +26,7 @@ declare module Chalk {
 		// General
 		reset: ChalkChain;
 		bold: ChalkChain;
+		dim: ChalkChain;
 		italic: ChalkChain;
 		underline: ChalkChain;
 		inverse: ChalkChain;
